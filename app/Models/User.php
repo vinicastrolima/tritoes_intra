@@ -21,6 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cpf', 
+        'phone_number', 
+        'main_position', 
+        'secondary_position', 
+        'path_profile_picture', 
     ];
 
     /**
@@ -41,5 +46,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+    ];
+
+    protected $attributes = [
+        'secondary_position' => null,
+        'path_profile_picture' => null,
     ];
 }
